@@ -1,0 +1,299 @@
+header {
+ text-align : center ;
+ line-height: 200px;
+font-family : Arial, Helvetica, sans-serif;
+background-image : linear-gradient(white,yellow,white);
+text-shadow : 10px 20px 4px rgba(0,0,0,.4);
+}
+
+header > p {
+  font-size : 70px;
+}
+
+section {
+  line-height 60px;
+}
+
+h2 {
+  margin-top : 100px;
+  padding-top : 15px;
+  clear : right;
+}
+
+footer {
+line-height : 150px ;
+background-color : lightpink;
+clear : right;
+margin-top : 100px;
+text-align : center;
+}
+
+section > h2 {
+  border-bottom : 2px solid gray;
+  margin-top :  150px;
+}
+
+.gnav {
+    display: flex;
+    height: 2rem;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.gnav > li {/*親階層のみ幅を25%にする*/
+    width: 33%;
+}
+/*全てのリスト・リンク共通*/
+.gnav li {
+    list-style: none;
+    position: relative;
+}
+
+.gnav li a {
+    background: #001b34;
+    border-right: 1px solid #eee;
+    color: #fff;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+/*子階層以降共通*/
+.gnav li li {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.gnav li li a {
+    border-top: 1px solid #eee;
+}
+
+.gnav li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+}
+
+img {
+  margin : 0 auto ;
+}
+
+#band , #piano , #grupa , #gym , #syowa , #spra , #anata , #Q , #keireki , .jiko-center , h4{
+  /* width : 80%; */
+  text-align: center;
+}
+
+span {
+  background : linear-gradient(transparent 10%, yellow 10%);
+  font-weight : bold;
+}
+
+.container {
+  margin-top : 250px;
+}
+
+form {
+  width : 70%;
+  margin : 0 auto;
+  }
+
+.container-form {
+  display : flex;
+  flex-direction : column;
+  align-items: flex-start;
+  margin-left: 45%;
+}
+
+#top {
+  float : right;
+  font-size : 30px;
+}
+
+#Q , #anata {
+  margin-top : 100px;
+}
+
+.carousel-item{
+  height : 400px;
+}
+
+.image-c {
+  height: 100%;
+}
+
+.container-piano , .container-gym , .container-grupa , .container-spra  {
+  display : flex;
+}
+
+.container-jiko {
+  display : flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.item-jiko{
+  width : 200px;
+  height : 200;
+  background : black;
+  text-align: center;
+  color: yellow;
+  border-radius: 10%;
+  margin: 5px 5px;
+}
+
+.item-jiko1 + p {
+  font-size : 20px;
+}
+
+.container-syowa{
+  display : flex;
+  flex-wrap : wrap ;
+  justify-content: space-around;
+}
+
+/* .item-grupa1 {order: 1;}
+.item-grupa2 {order: 3;}
+.item-grupa3 {order: 2;} */
+
+.item-syowa1 {order: 1;}
+.item-syowa2 {order: 2;}
+.item-syowa3 {order: 4;}
+.item-syowa4 {order: 5;}
+.item-syowa5 {order: 3;}
+
+.band , blockquote {
+  /* text-align: center; */
+  width: 80%;
+  margin: 0 auto;
+}
+
+table {
+  text-align : center;
+  width : 50% ;
+  margin : 0 auto ;
+  background: #666;
+}
+
+th { background: lightgray;}
+tr { background: #fff; }
+td { padding: 5px; }
+.odd:not(:first-child){ background: lightpink; }
+
+.open{
+  background: #fa2;
+  color: #fff;
+  cursor: pointer;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 15px;
+  }
+
+#slideBox{
+  padding: 10px;
+  border: 1px #ccc solid;
+  display: none;
+  }
+
+form {
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-form {
+  width : 58px;
+  margin : auto;
+}
+
+.item-grupa2 a {
+  padding: 14px 10px;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  /* width: 180px; */
+  }
+
+.item-grupa2 span {
+  background: #ffc;
+  border: 1px solid #fc6;
+  height: 45px;
+  position: absolute;
+  top: -85px;
+  left: 0;
+  text-align: center;
+  padding: 20px 12px 10px;
+  z-index: 2;
+  display: none;
+}
+
+@media screen and (max-width : 1320px){
+  .container-piano , .container-gym , .container-grupa , .container-spra{
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .item-piano1 {order : 1}
+  .item-piano2 {order : 3}
+  .item-piano3 {order : 2}
+  .item-gym1 {order : 1}
+  .item-gym2 {order : 3}
+  .item-gym3 {order : 2}
+  .item-grupa1 {order : 1}
+  .item-grupa2 {order : 3}
+  .item-grupa3 {order : 2}
+
+  table {
+    width : 90%;
+  }
+  }
+
+@media screen and (max-width : 768px){
+  .container {
+    display: none;
+    }
+
+  .container-piano , .container-gym , .container-grupa , .container-spra{
+    flex-direction: column;
+    align-items: center;
+    }
+
+  .band , #anata {
+    font-size : 15px;
+    width : 90%;
+  }
+
+  .item-grupa1 , .item-grupa3 , .item-spra1 , .item-gym3{
+    margin-bottom: 10px;
+  }
+
+  #wrapper{
+    overflow:hidden;
+  }
+
+  td {
+    text-align: left;
+  }
+
+  th {
+    font-size : 12px;
+    text-align : center;
+  }
+
+  header > p {
+    font-size : 50px;
+  }
+
+  .container-grupa img{
+    width : 360px;
+    height : 200px;
+  }
+  .container-spra img{
+    width : 360px;
+    height : 200px;
+  }
+  #keireki , #band , #piano , #gym , #grupa , #syowa , #spra , td , section > h4{font-size : 17px;}
+
+  .gnav {margin : 0 auto;}
